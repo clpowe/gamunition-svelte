@@ -11,14 +11,21 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
+    "@poppanator/sveltekit-svg": "^0.3.1",
+    "@sveltejs/adapter-vercel": "next",
     "@sveltejs/kit": "next",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.5.0",
-    "svelte": "^3.44.0"
+    "svelte": "^3.44.0",
+    "svelte-windicss-preprocess": "^4.2.6",
+    "vite-plugin-windicss": "^1.8.3"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "airtable": "^0.11.2",
+    "svelte-markdown": "^0.2.2"
+  }
 }

@@ -8,13 +8,13 @@
 	<div class="mycontainer text-center md:text-right">
 		<div>
 			<h1 class="flex justify-center flex-col md:(text-right)">
-				<span class="text-white uppercase font-oswald  text-2xl leading-none">Welcome To</span>
+				<span class="text-light uppercase font-oswald  text-2xl leading-none">Welcome To</span>
 				<span class="font-oswald uppercase text-yellow text-2xl leading-none sm:(text-4xl)"
 					>Gammunition</span
 				>
 			</h1>
 			<div
-				class="flex text-body text-white uppercase space-x-4 justify-center mb-4 md:(justify-end)"
+				class="flex text-body text-light uppercase space-x-4 justify-center mb-4 md:(justify-end)"
 			>
 				<p>Knowledge</p>
 				<p>Skills</p>

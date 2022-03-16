@@ -1,4 +1,6 @@
 <script>
+	import LoadingSpinner from '$lib/loadingSpinner.svelte';
+
 	const record = (async () => {
 		try {
 			const res = await fetch('http://localhost:3000/api/FeatureSection/receeyP2JaINsow5a');
@@ -14,7 +16,7 @@
 <section class="py-40 font-oswald bg-yellow">
 	<div class="text-center max-w-3xl m-auto px-4">
 		{#await record}
-			<p>...waiting</p>
+			<LoadingSpinner color="gun-black" />
 		{:then section}
 			<h2 class="text-lg mb-3 md:(text-xl mb-5) leading-none ">
 				{section.record.data.subhead}

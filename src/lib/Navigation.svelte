@@ -72,7 +72,7 @@
 				</svg>
 			</div>
 			<!-- Gammunition Name -->
-			<div class="text-white text-xl font-oswald uppercase flex flex-col leading-none">
+			<div class="text-light text-xl font-oswald uppercase flex flex-col leading-none">
 				Gammunition
 				<span class="text-body font-lato text-yellow font-light  leading-snug">Arms Training</span>
 			</div>
@@ -90,7 +90,7 @@
 
 			<ul class="space-x-4 self-center self-center hidden md:flex">
 				<li>
-					<a href="/blog" sveltekit:prefetch class="text-white uppercase font-light">Blog</a>
+					<a href="/blog" sveltekit:prefetch class="text-light uppercase font-light">Blog</a>
 				</li>
 				<li>
 					<a href="/blog" sveltekit:prefetch class="svg">
@@ -139,6 +139,6 @@
 	}
 
 	.svg {
-		@apply text-yellow hover:(text-white) transition-all;
+		@apply text-yellow hover:(text-light) transition-all;
 	}
 </style>

@@ -7,7 +7,7 @@ export default {
 			oragne: '#FBC02D',
 			'gun-black': '#212121',
 			'light-grey': '#757575',
-			white: '#FEFEFE'
+			light: '#FEFEFE'
 		},
 		fontSize: {
 			xs: ['.5rem'],

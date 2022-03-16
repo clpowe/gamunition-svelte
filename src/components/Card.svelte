@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="grid grid-cols-1 gap-6 text-center md:(grid-cols-[1fr,2fr] text-left) text-white bg-gun-black p-6 max-w-xl "
+	class="grid grid-cols-1 gap-6 text-center md:(grid-cols-[1fr,2fr] text-left) text-light bg-gun-black p-6 max-w-xl "
 >
 	<div class="text-center leading-none">
 		<p class="text-4xl">${training.price}</p>

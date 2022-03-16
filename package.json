@@ -20,6 +20,7 @@
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.5.0",
     "svelte": "^3.44.0",
+    "svelte-carousel": "^1.0.17-rc4",
     "svelte-windicss-preprocess": "^4.2.6",
     "vite-plugin-windicss": "^1.8.3"
   },

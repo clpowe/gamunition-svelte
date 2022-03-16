@@ -3,15 +3,8 @@
 	import Feature from '../components/Feature.svelte';
 	import Training from '../components/Training.svelte';
 	import FirearmServices from '../components/FirearmServices.svelte';
-
-	// export let FeatureSection;
-	// export let LiveFireTraing;
-	// export let RangeFees;
-	// export let InHomeTraining;
-	// export let inHomeAddOns;
-	// export let PurchaseAndSell;
-	// export let WeaponCleaning;
-	// export let Testimonials;
+	import Testimonials from '../components/Testimonials.svelte';
+	import Booking from '../components/Booking.svelte';
 
 	import { fly, fade } from 'svelte/transition';
 	let hasError = false;
@@ -59,47 +52,10 @@
 
 	<FirearmServices />
 
-	<!-- <section>
-		Firearm Services<br />
-		Purchase & Selling<br />
-		{#each PurchaseAndSell as item (item.id)}
-			<div>
-				{item.item}<br />
-				{item.info}<br />
-				{item.price}<br />
-			</div>
-		{/each}
-		<br />
-		Weapon Cleaning<br />
-		{#each WeaponCleaning as item (item.id)}
-			<div>
-				{item.item}<br />
-				{item.info}<br />
-				{item.price}<br />
-			</div>
-		{/each}
-	</section> -->
-	<!-- <section>
-		Testimonials<br />
-		{#each Testimonials as testimonial (testimonial.id)}
-			<div>
-				{testimonial.name}<br />
-				{testimonial.comment}<br />
-			</div>
-		{/each}
-	</section> -->
-	<section>
-		Booking
-		<!-- Calendly inline widget begin -->
-		<!-- <div
-			title="Booking a training"
-			class="calendly-inline-widget border-0 "
-			data-url="https://calendly.com/bookinggammunition?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=212121&text_color=ffffff&primary_color=ffeb3b"
-			style="min-width:320px;height:1500px;"
-		/> -->
+	<Testimonials />
 
-		<!-- Calendly inline widget end -->
-	</section>
+	<!-- <Booking /> -->
+
 	<!-- <section>
 		Contact<br />
 		{#if hasError == true}
@@ -145,13 +101,6 @@
 			</form>
 		{/if}
 	</section> -->
-
-	<!-- <script
-		type="text/javascript"
-		loading="lazy"
-		src="https://assets.calendly.com/assets/external/widget.js"
-		defer>
-	</script> -->
 </div>
 
 <style>

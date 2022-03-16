@@ -26,13 +26,6 @@ export async function get({ params }) {
 	return {
 		body: {
 			record: record
-			// LiveFireTraing: LiveFireTraing,
-			// RangeFees: RangeFees,
-			// InHomeTraining: InHomeTraining,
-			// inHomeAddOns: inHomeAddOns,
-			// PurchaseAndSell: PurchaseAndSell,
-			// WeaponCleaning: WeaponCleaning,
-			// Testimonials: Testimonials
 		}
 	};
 }

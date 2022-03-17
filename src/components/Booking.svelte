@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<section class="py-40 bg-light">
+<section class="py-30 bg-light">
 	<div class="mycontainer text-center">
 		<h2 class="text-gun-black text-3xl uppercase font-oswald leading-none mb-6">Booking</h2>
 		<!-- Calendly inline widget begin -->

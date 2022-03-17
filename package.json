@@ -1,6 +1,8 @@
 {
   "name": "gamunition-svelte",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).",
+  "main": "mdsvex.config.js",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
@@ -24,9 +26,19 @@
     "svelte-windicss-preprocess": "^4.2.6",
     "vite-plugin-windicss": "^1.8.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clpowe/gamunition-svelte.git"
+  },
   "type": "module",
   "dependencies": {
     "airtable": "^0.11.2",
     "svelte-markdown": "^0.2.2"
-  }
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clpowe/gamunition-svelte/issues"
+  },
+  "homepage": "https://github.com/clpowe/gamunition-svelte#readme"
 }

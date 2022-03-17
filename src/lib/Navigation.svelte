@@ -1,7 +1,12 @@
 <script>
+	import { slide } from 'svelte/transition';
+	let isVisable = false;
+	const openNav = () => {
+		isVisable = !isVisable;
+	};
 </script>
 
-<nav class="bg-gun-black py-6 ">
+<nav class="bg-gun-black py-6 relative">
 	<div class="mycontainer flex ">
 		<a href="/" class="flex">
 			<!-- Gammunition Logo -->
@@ -78,7 +83,7 @@
 			</div>
 		</a>
 
-		<div class="ml-auto self-center self-center">
+		<div class="ml-auto self-center self-center" on:click={openNav}>
 			<div class="svg block md:hidden">
 				<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 448 512"
 					><path
@@ -131,6 +136,51 @@
 			</ul>
 		</div>
 	</div>
+	{#if isVisable}
+		<div class="absolute right-0 p-4" in:slide out:slide>
+			<ul class="space-y-4 flex flex-col">
+				<li>
+					<a href="/blog" sveltekit:prefetch class="text-light uppercase font-light">Blog</a>
+				</li>
+				<li class="justify-self-end">
+					<a href="/blog" sveltekit:prefetch class="svg">
+						<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 14.287 26.676">
+							<title>Gammunition Facebook</title>
+							<path
+								d="M36.241,15.005l.741-4.828H32.35V7.045a2.414,2.414,0,0,1,2.722-2.608h2.106V.326A25.682,25.682,0,0,0,33.439,0c-3.815,0-6.309,2.312-6.309,6.5v3.679H22.89v4.828h4.241V26.676H32.35V15.005Z"
+								transform="translate(-22.89)"
+								fill="currentColor"
+							/>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="/blog" sveltekit:prefetch class="svg">
+						<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 26.682 26.676">
+							<title>Gammunition Instagram</title>
+							<path
+								d="M13.269,38.324a6.839,6.839,0,1,0,6.839,6.839A6.829,6.829,0,0,0,13.269,38.324Zm0,11.286a4.447,4.447,0,1,1,4.447-4.447,4.455,4.455,0,0,1-4.447,4.447Zm8.715-11.566a1.6,1.6,0,1,1-1.6-1.6A1.592,1.592,0,0,1,21.984,38.044Zm4.53,1.619a7.9,7.9,0,0,0-2.155-5.589,7.947,7.947,0,0,0-5.589-2.155c-2.2-.125-8.8-.125-11.006,0a7.935,7.935,0,0,0-5.589,2.149A7.921,7.921,0,0,0,.019,39.657c-.125,2.2-.125,8.8,0,11.006a7.9,7.9,0,0,0,2.155,5.589,7.957,7.957,0,0,0,5.589,2.155c2.2.125,8.8.125,11.006,0a7.9,7.9,0,0,0,5.589-2.155,7.947,7.947,0,0,0,2.155-5.589C26.639,48.461,26.639,41.865,26.514,39.663ZM23.668,53.027a4.5,4.5,0,0,1-2.536,2.536c-1.756.7-5.923.536-7.863.536s-6.113.155-7.863-.536A4.5,4.5,0,0,1,2.87,53.027c-.7-1.756-.536-5.923-.536-7.863S2.18,39.05,2.87,37.3a4.5,4.5,0,0,1,2.536-2.536c1.756-.7,5.923-.536,7.863-.536s6.113-.155,7.863.536A4.5,4.5,0,0,1,23.668,37.3c.7,1.756.536,5.923.536,7.863S24.365,51.276,23.668,53.027Z"
+								transform="translate(0.075 -31.825)"
+								fill="currentColor"
+							/>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="/blog" sveltekit:prefetch class="svg">
+						<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 37.94 26.676">
+							<title>Gammunition Youtube</title>
+							<path
+								d="M52.08,68.174A4.767,4.767,0,0,0,48.726,64.8C45.767,64,33.9,64,33.9,64s-11.864,0-14.823.8a4.767,4.767,0,0,0-3.354,3.376c-.793,2.978-.793,9.191-.793,9.191s0,6.213.793,9.191a4.7,4.7,0,0,0,3.354,3.322c2.959.8,14.823.8,14.823.8s11.864,0,14.823-.8a4.7,4.7,0,0,0,3.354-3.322c.793-2.978.793-9.191.793-9.191S52.873,71.152,52.08,68.174ZM30.023,83.006V71.724l9.916,5.641Z"
+								transform="translate(-14.933 -64)"
+								fill="currentColor"
+							/>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+	{/if}
 </nav>
 
 <style lang="scss">

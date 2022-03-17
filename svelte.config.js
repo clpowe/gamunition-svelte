@@ -7,7 +7,10 @@ const config = {
 	kit: {
 		adapter: vercel(),
 		vite: {
-			plugins: [WindiCSS(), svg()]
+			plugins: [WindiCSS(), svg()],
+			optimizeDeps: {
+				include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
+			}
 		}
 	}
 };

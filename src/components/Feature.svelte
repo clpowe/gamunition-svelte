@@ -14,7 +14,7 @@
 
 	const record = (async () => {
 		try {
-			const res = await fetch(`${myURL}api/FeatureSection/receeyP2JaINsow5a`);
+			const res = await fetch(`/api/FeatureSection/receeyP2JaINsow5a`);
 			const data = await res.json();
 
 			return data;

@@ -15,7 +15,7 @@
 
 	const record = (async () => {
 		try {
-			const res = await fetch(`${myURL}api/${base}`);
+			const res = await fetch(`/api/${base}`);
 			const data = await res.json();
 			return data;
 		} catch (error) {

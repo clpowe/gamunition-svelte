@@ -6,7 +6,7 @@
 
 	if (process.env.NODE_ENV === 'production') {
 		// For production
-		myURL = process.env.MY_API_KEY;
+		myURL = process.env.VERCEL_URL;
 	} else {
 		// For development
 		myURL = URL;
@@ -14,7 +14,7 @@
 
 	const record = (async () => {
 		try {
-			const res = await fetch(`/api/FeatureSection/receeyP2JaINsow5a`);
+			const res = await fetch(`${myURL}api/FeatureSection/receeyP2JaINsow5a`);
 			const data = await res.json();
 
 			return data;

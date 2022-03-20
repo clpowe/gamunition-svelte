@@ -1,15 +1,23 @@
 <script>
 	import { onMount } from 'svelte';
 	import TestimonyCard from './TestimonyCard.svelte';
+	import { URL } from '$lib/Env';
+
+	let myURL;
+
+	if (process.env.NODE_ENV === 'production') {
+		// For production
+		myURL = process.env.VERCEL_URL;
+	} else {
+		// For development
+		myURL = URL;
+	}
 
 	let Carousel; // for saving Carousel component class
 	let carousel; // for calling methods of the carousel instance
 	onMount(async () => {
 		const module = await import('svelte-carousel');
 		Carousel = module.default;
-
-
-		
 	});
 
 	const handleNextClick = () => {
@@ -21,7 +29,7 @@
 
 	const record = (async () => {
 		try {
-			const res = await fetch(`/api/Testimonials`);
+			const res = await fetch(`${myURL}api/Testimonials`);
 			const data = await res.json();
 			return data;
 		} catch (error) {

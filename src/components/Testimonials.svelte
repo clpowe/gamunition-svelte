@@ -7,6 +7,9 @@
 	onMount(async () => {
 		const module = await import('svelte-carousel');
 		Carousel = module.default;
+
+
+		
 	});
 
 	const handleNextClick = () => {
@@ -41,21 +44,23 @@
 				</p>
 			</div>
 			<div class="w-full md:w-1/2 relative my-auto">
-				{#await record}
-					<p>...waiting</p>
-				{:then section}
-					<svelte:component this={Carousel} bind:this={carousel} dots={false} arrows={false}>
-						{#each section.data as Testimony (Testimony.id)}
-							<TestimonyCard {Testimony} />
-						{/each}
-					</svelte:component>
-				{:catch error}
-					<div>{error}</div>
-				{/await}
-				<div class="absolute right-0 bottom-0 flex flex-col">
+				<div class="mask">
+					{#await record}
+						<p>...waiting</p>
+					{:then section}
+						<svelte:component this={Carousel} bind:this={carousel} dots={false} arrows={false}>
+							{#each section.data as Testimony (Testimony.id)}
+								<TestimonyCard {Testimony} />
+							{/each}
+						</svelte:component>
+					{:catch error}
+						<div>{error}</div>
+					{/await}
+				</div>
+				<div class="absolute right-0 bottom-0 flex flex-col ">
 					<button
 						on:click={handlePrevtClick}
-						class="text-light transition-all hover:text-yellow p-2"
+						class="text-light transition-all hover:text-yellow p-2 z-10"
 					>
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22">
 							<path
@@ -85,3 +90,15 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	.mask {
+		mask-image: linear-gradient(
+			90deg,
+			rgba(0, 0, 0, 0) 0%,
+			rgba(0, 0, 0, 1) 20%,
+			rgba(0, 0, 0, 1) 80%,
+			rgba(0, 0, 0, 0) 100%
+		);
+	}
+</style>

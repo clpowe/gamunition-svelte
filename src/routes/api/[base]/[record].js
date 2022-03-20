@@ -2,7 +2,8 @@ import Airtable from 'airtable';
 
 Airtable.configure({
 	endpointUrl: 'https://api.airtable.com',
-	apiKey: 'keyjXkmALVHr1yPDD'
+	// @ts-ignore
+	apiKey: import.meta.env.VITE_APIKEY
 });
 
 var base = Airtable.base('app24nIoWe3Q49B6u');

@@ -23,9 +23,3 @@
 
 	<Contact />
 </div>
-
-<style>
-	section {
-		margin: 100px 0;
-	}
-</style>

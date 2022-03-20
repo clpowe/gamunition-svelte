@@ -1,21 +1,21 @@
 import Airtable from 'airtable';
 
-import { MY_API_KEY } from '$lib/Env';
+// import { MY_API_KEY } from '$lib/Env';
 
-let myApiKey;
+// let myApiKey;
 
-if (process.env.NODE_ENV === 'production') {
-	// For production
-	myApiKey = process.env.MY_API_KEY;
-} else {
-	// For development
-	myApiKey = MY_API_KEY;
-}
+// if (process.env.NODE_ENV === 'production') {
+// 	// For production
+// 	myApiKey = process.env.MY_API_KEY;
+// } else {
+// 	// For development
+// 	myApiKey = MY_API_KEY;
+// }
 
 Airtable.configure({
 	endpointUrl: 'https://api.airtable.com',
 	// @ts-ignore
-	apiKey: myApiKey
+	apiKey: import.meta.env.VITE_APIKEY
 });
 
 var base = Airtable.base('app24nIoWe3Q49B6u');

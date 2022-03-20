@@ -27,7 +27,7 @@ const getRecords = async (_base) => {
 
 		return array;
 	} catch (error) {
-		console.log(1, error);
+		return error.message;
 	}
 };
 

@@ -1,7 +1,5 @@
 import Airtable from 'airtable';
 
-console;
-
 Airtable.configure({
 	endpointUrl: 'https://api.airtable.com',
 	// @ts-ignore
@@ -10,6 +8,8 @@ Airtable.configure({
 			? process.env.VITE_APIKEY
 			: import.meta.env.VITE_APIKEY
 });
+
+console.log(Airtable);
 
 var base = Airtable.base('app24nIoWe3Q49B6u');
 

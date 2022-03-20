@@ -1,11 +1,5 @@
 <script>
 	import LoadingSpinner from '$lib/loadingSpinner.svelte';
-
-	const record = (async () => {
-		const res = await fetch(`/api/FeatureSection/receeyP2JaINsow5a`);
-		const data = await res.json();
-		return data;
-	})();
 </script>
 
 <section class="py-40 font-oswald bg-yellow">

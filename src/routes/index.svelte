@@ -8,6 +8,10 @@
 	import Contact from '../components/Contact.svelte';
 </script>
 
+<svelte:head>
+	<title>Gammunition Arms and Training</title>
+</svelte:head>
+
 <div>
 	<Hero />
 

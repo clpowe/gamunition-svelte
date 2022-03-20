@@ -3,7 +3,12 @@
 	export let body;
 </script>
 
-<div class="h-lg bg-center bg-cover" style="background-image: url('{blog.image}')" />
+<svelte:head>
+	<title>Gammunition Arms and Training | {blog.title}</title>
+	<meta name="author" content={blog.author} />
+</svelte:head>
+
+<div class="h-lg bg-center bg-cover mb-10" style="background-image: url('{blog.image}')" />
 
 <section class="mycontainer">
 	<article

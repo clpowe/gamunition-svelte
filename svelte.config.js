@@ -7,6 +7,9 @@ const config = {
 	kit: {
 		adapter: vercel(),
 		vite: {
+			define: {
+				'process.env': process.env
+			},
 			plugins: [WindiCSS(), svg()],
 			optimizeDeps: {
 				include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']

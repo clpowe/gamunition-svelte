@@ -48,7 +48,7 @@
 							{/each}
 						</svelte:component>
 					{:catch error}
-						<div>{error}</div>
+						<div>{error.message}</div>
 					{/await}
 				</div>
 				<div class="absolute right-0 bottom-0 flex flex-col ">

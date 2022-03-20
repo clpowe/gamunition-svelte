@@ -19,7 +19,7 @@
 				<Card {training} />
 			{/each}
 		{:catch error}
-			<div>{error}</div>
+			<div>{error.message}</div>
 		{/await}
 	</div>
 </div>

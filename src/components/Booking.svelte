@@ -13,7 +13,6 @@
 		/>
 		<script
 			type="text/javascript"
-			loading="lazy"
 			src="https://assets.calendly.com/assets/external/widget.js"
 			defer>
 		</script>

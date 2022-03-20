@@ -1,19 +1,5 @@
 import Airtable from 'airtable';
 
-// const p = process.env.NODE_ENV === 'production' ? process.env : import.meta.env;
-
-// import { MY_API_KEY } from '$lib/Env';
-
-// let myApiKey;
-
-// if (process.env.NODE_ENV === 'production') {
-// 	// For production
-// 	myApiKey = process.env.MY_API_KEY;
-// } else {
-// 	// For development
-// 	myApiKey = MY_API_KEY;
-// }
-
 Airtable.configure({
 	endpointUrl: 'https://api.airtable.com',
 	// @ts-ignore
@@ -39,7 +25,7 @@ const getRecords = async (_base) => {
 		});
 		return array;
 	} catch (error) {
-		console.log(error);
+		console.log(error.message);
 	}
 };
 

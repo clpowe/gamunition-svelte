@@ -239,6 +239,6 @@
 	}
 
 	.svg {
-		@apply text-yellow hover:(text-light) transition-all;
+		@apply text-yellow hover:text-light transition-all;
 	}
 </style>

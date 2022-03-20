@@ -1,17 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import TestimonyCard from './TestimonyCard.svelte';
-	import { URL } from '$lib/Env';
-
-	let myURL;
-
-	if (process.env.NODE_ENV === 'production') {
-		// For production
-		myURL = process.env.VERCEL_URL;
-	} else {
-		// For development
-		myURL = URL;
-	}
+	import LoadingSpinner from '$lib/loadingSpinner.svelte';
 
 	let Carousel; // for saving Carousel component class
 	let carousel; // for calling methods of the carousel instance
@@ -28,13 +18,9 @@
 	};
 
 	const record = (async () => {
-		try {
-			const res = await fetch(`/api/Testimonials`);
-			const data = await res.json();
-			return data;
-		} catch (error) {
-			console.error(error.message);
-		}
+		const res = await fetch(`/api/Testimonials`);
+		const data = await res.json();
+		return data;
 	})();
 </script>
 
@@ -54,7 +40,7 @@
 			<div class="w-full md:w-1/2 relative my-auto">
 				<div class="mask">
 					{#await record}
-						<p>...waiting</p>
+						<LoadingSpinner color="gun-black" />
 					{:then section}
 						<svelte:component this={Carousel} bind:this={carousel} dots={false} arrows={false}>
 							{#each section.data as Testimony (Testimony.id)}

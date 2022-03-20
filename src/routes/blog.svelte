@@ -56,7 +56,4 @@
 </section>
 
 <style>
-	.hidden-text {
-		font-size: 0px;
-	}
 </style>

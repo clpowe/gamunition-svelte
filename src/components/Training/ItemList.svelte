@@ -3,19 +3,37 @@
 	import LongCard from '../LongCard.svelte';
 	import LoadingSpinner from '$lib/loadingSpinner.svelte';
 
-	const record = (async () => {
-		const res = await fetch(`/api/${base}`);
-		const data = await res.json();
-		return data;
-	})();
+	// @ts-ignore
+	import { dev } from '$app/env';
+
+	// @ts-ignore
+	const KEY = dev ? import.meta.env.VITE_APIKEY : process.env.VITE_APIKEY;
+
+	const url = `https://api.airtable.com/v0/app24nIoWe3Q49B6u/${base}?api_key=${KEY}`;
+
+	const getItems = async () => {
+		let array = [];
+		try {
+			const response = await fetch(url);
+			const data = await response.json();
+			data.records.forEach((item) => {
+				array.push({ ...item.fields, id: item.id });
+			});
+			return array;
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	const response = getItems();
 </script>
 
 <div>
-	{#await record}
+	{#await response}
 		<LoadingSpinner color="yellow" />
-	{:then section}
+	{:then items}
 		<div class="max-w-xl mx-auto space-y-5 ">
-			{#each section.data as item (item.id)}
+			{#each items as item (item.id)}
 				<LongCard {item} />
 			{/each}
 		</div>

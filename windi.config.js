@@ -28,7 +28,7 @@ export default {
 		plugin(({ addUtilities }) => {
 			const newUtilities = {
 				'.mycontainer': {
-					width: 'min(100% - 2rem, 75rem)',
+					width: 'min(100% - 4rem, 75rem)',
 					'margin-inline': 'auto'
 				}
 			};

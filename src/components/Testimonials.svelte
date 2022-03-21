@@ -17,11 +17,29 @@
 		carousel.goToPrev();
 	};
 
-	const record = (async () => {
-		const res = await fetch(`/api/Testimonials`);
-		const data = await res.json();
-		return data;
-	})();
+	// @ts-ignore
+	import { dev } from '$app/env';
+
+	// @ts-ignore
+	const KEY = dev ? import.meta.env.VITE_APIKEY : process.env.VITE_APIKEY;
+
+	const url = `https://api.airtable.com/v0/app24nIoWe3Q49B6u/Testimonials?api_key=${KEY}`;
+
+	const getTestimonials = async () => {
+		let array = [];
+		try {
+			const response = await fetch(url);
+			const data = await response.json();
+			data.records.forEach((item) => {
+				array.push({ ...item.fields, id: item.id });
+			});
+			return array;
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	const records = getTestimonials();
 </script>
 
 <section class="py-40">
@@ -39,11 +57,11 @@
 			</div>
 			<div class="w-full md:w-1/2 relative my-auto">
 				<div class="mask">
-					{#await record}
+					{#await records}
 						<LoadingSpinner color="gun-black" />
 					{:then section}
 						<svelte:component this={Carousel} bind:this={carousel} dots={false} arrows={false}>
-							{#each section.data as Testimony (Testimony.id)}
+							{#each section as Testimony (Testimony.id)}
 								<TestimonyCard {Testimony} />
 							{/each}
 						</svelte:component>

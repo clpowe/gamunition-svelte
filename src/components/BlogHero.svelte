@@ -1,6 +1,8 @@
 <header class="blog h-lg grid content-center ">
 	<div class="mycontainer text-center z-10">
-		<h1 class="font-oswald text-yellow text-4xl uppercase leading-none">Catching Thoughts</h1>
+		<h1 class="font-oswald text-yellow text-3xl md:text-4xl uppercase leading-none">
+			Catching Thoughts
+		</h1>
 		<p class="text-light font-lato font-light mt-2">
 			Saved By Grace - Husband - Father - NRA Firearms Instructor - BOP Field Agent - & Loyalist
 		</p>

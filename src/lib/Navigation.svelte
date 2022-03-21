@@ -120,7 +120,6 @@
 				<li>
 					<a
 						href="https://www.facebook.com/GammunitionArmsTraining/photos/?ref=page_internal"
-						sveltekit:prefetch
 						class="svg"
 						target="_blank"
 					>
@@ -135,12 +134,7 @@
 					</a>
 				</li>
 				<li>
-					<a
-						href="https://www.instagram.com/gammunitionarmstraining/"
-						sveltekit:prefetch
-						class="svg"
-						target="_blank"
-					>
+					<a href="https://www.instagram.com/gammunitionarmstraining/" class="svg" target="_blank">
 						<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 26.682 26.676">
 							<title>Gammunition Instagram</title>
 							<path
@@ -152,12 +146,7 @@
 					</a>
 				</li>
 				<li>
-					<a
-						href="https://www.youtube.com/c/tgammage"
-						sveltekit:prefetch
-						class="svg"
-						target="_blank"
-					>
+					<a href="https://www.youtube.com/c/tgammage" class="svg" target="_blank">
 						<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 37.94 26.676">
 							<title>Gammunition Youtube</title>
 							<path
@@ -180,7 +169,6 @@
 				<li class="justify-self-end">
 					<a
 						href="https://www.facebook.com/GammunitionArmsTraining/photos/?ref=page_internal"
-						sveltekit:prefetch
 						class="svg"
 						target="_blank"
 					>
@@ -195,12 +183,7 @@
 					</a>
 				</li>
 				<li>
-					<a
-						href="https://www.instagram.com/gammunitionarmstraining/"
-						sveltekit:prefetch
-						class="svg"
-						target="_blank"
-					>
+					<a href="https://www.instagram.com/gammunitionarmstraining/" class="svg" target="_blank">
 						<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 26.682 26.676">
 							<title>Gammunition Instagram</title>
 							<path
@@ -212,12 +195,7 @@
 					</a>
 				</li>
 				<li>
-					<a
-						href="https://www.youtube.com/c/tgammage"
-						sveltekit:prefetch
-						class="svg"
-						target="_blank"
-					>
+					<a href="https://www.youtube.com/c/tgammage" class="svg" target="_blank">
 						<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 37.94 26.676">
 							<title>Gammunition Youtube</title>
 							<path

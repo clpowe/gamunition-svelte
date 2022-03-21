@@ -1,11 +1,31 @@
+<script context="module">
+	// @ts-ignore
+	import { dev } from '$app/env';
+	// @ts-ignore
+	const KEY = dev ? import.meta.env.VITE_APIKEY : process.env.VITE_APIKEY;
+
+	export async function load({ fetch, params }) {
+		const url = `https://api.airtable.com/v0/app24nIoWe3Q49B6u/blog/${params.id}?api_key=${KEY}`;
+		const response = await fetch(url);
+		const data = await response.json();
+
+		return {
+			// status: response.status,
+			props: {
+				blog: response.ok && (await { ...data.fields, posted: data.createdTime, id: data.id })
+			}
+		};
+	}
+</script>
+
 <script>
+	import { marked } from 'marked';
 	export let blog;
-	export let body;
+	const body = marked.parse(blog.body);
 </script>
 
 <svelte:head>
 	<title>Gammunition Arms and Training | {blog.title}</title>
-	<meta name="author" content={blog.author} />
 </svelte:head>
 
 <div class="h-lg bg-center bg-cover mb-10" style="background-image: url('{blog.image}')" />

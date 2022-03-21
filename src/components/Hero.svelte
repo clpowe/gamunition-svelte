@@ -1,5 +1,10 @@
 <script>
 	import BTN from '$lib/btn.svelte';
+	// @ts-ignore
+	import { goto } from '$app/navigation';
+	function routeToPage() {
+		goto(`#booking`);
+	}
 </script>
 
 <section
@@ -20,7 +25,7 @@
 				<p>Skills</p>
 				<p>Attitude</p>
 			</div>
-			<BTN color="yellow">Book Now</BTN>
+			<BTN buttonAction={routeToPage} color="yellow">Book Now</BTN>
 		</div>
 	</div>
 </section>

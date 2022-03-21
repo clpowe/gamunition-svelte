@@ -27,3 +27,9 @@
 
 	<Contact />
 </div>
+
+<style>
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+</style>

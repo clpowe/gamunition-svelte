@@ -23,7 +23,7 @@
 	// @ts-ignore
 	const KEY = dev ? import.meta.env.VITE_APIKEY : process.env.VITE_APIKEY;
 
-	const url = `https://api.airtable.com/v0/app24nIoWe3Q49B6u/Testimonials?api_key=${KEY}`;
+	const url = `https://api.airtable.com/v0/appq9rVNBW9qLegHl/Testimonials?api_key=${KEY}`;
 
 	const getTestimonials = async () => {
 		let array = [];

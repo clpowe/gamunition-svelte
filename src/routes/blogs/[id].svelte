@@ -5,7 +5,7 @@
 	const KEY = dev ? import.meta.env.VITE_APIKEY : process.env.VITE_APIKEY;
 
 	export async function load({ fetch, params }) {
-		const url = `https://api.airtable.com/v0/app24nIoWe3Q49B6u/blog/${params.id}?api_key=${KEY}`;
+		const url = `https://api.airtable.com/v0/appq9rVNBW9qLegHl/blog/${params.id}?api_key=${KEY}`;
 		const response = await fetch(url);
 		const data = await response.json();
 

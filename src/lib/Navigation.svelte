@@ -164,7 +164,7 @@
 		<div class="absolute right-0 p-4 z-30" in:slide out:slide>
 			<ul class="space-y-4 flex flex-col">
 				<li>
-					<a href="/blog" sveltekit:prefetch class="text-light uppercase font-light">Blog</a>
+					<a href="/blog" class="text-light uppercase font-light">Blog</a>
 				</li>
 				<li class="justify-self-end">
 					<a

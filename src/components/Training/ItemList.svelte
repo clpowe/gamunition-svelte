@@ -9,7 +9,7 @@
 	// @ts-ignore
 	const KEY = dev ? import.meta.env.VITE_APIKEY : process.env.VITE_APIKEY;
 
-	const url = `https://api.airtable.com/v0/app24nIoWe3Q49B6u/${base}?api_key=${KEY}`;
+	const url = `https://api.airtable.com/v0/appq9rVNBW9qLegHl/${base}?api_key=${KEY}`;
 
 	const getItems = async () => {
 		let array = [];

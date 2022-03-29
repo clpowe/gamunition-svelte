@@ -10,6 +10,10 @@
 
 <svelte:head>
 	<title>Gammunition Arms and Training</title>
+	<meta
+		name="description"
+		content="Are You A First Time Shooter or New Firearm Owner? However You've Arrive Here, You're Ready. Allow A Certified NRA Instructor To Transfer The Knowledge, Skills and Attitude You Need To Be A Responsible Firearm Operator."
+	/>
 </svelte:head>
 
 <div>

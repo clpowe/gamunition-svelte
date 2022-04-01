@@ -1,3 +1,15 @@
+<script>
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		let calendly = document.createElement('script');
+		calendly.src = 'https://assets.calendly.com/assets/external/widget.js';
+		calendly.type = 'text/javascript';
+
+		document.body.appendChild(calendly);
+	});
+</script>
+
 <section class="py-30 " id="booking">
 	<div class="mycontainer text-center">
 		<h2 class="text-3xl text-yellow uppercase font-oswald leading-none mb-6">Booking</h2>
@@ -9,9 +21,9 @@
 			style="min-width:320px;"
 		/>
 
-		<script
+		<!-- <script
 			type="text/javascript"
-			src="https://assets.calendly.com/assets/external/widget.js"></script>
+			src="https://assets.calendly.com/assets/external/widget.js"></script> -->
 		<!-- Calendly inline widget end -->
 	</div>
 </section>

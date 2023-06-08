@@ -11,6 +11,7 @@
 		let square = document.createElement('script');
 		square.src = 'https://square.site/appointments/buyer/widget/97bhymxw3dt5ce/LXD1YR91QQA5J.js';
 		square.type = 'text/javascript';
+		square.defer = true;
 
 		document.getElementById('bookingApp').appendChild(square);
 	});
